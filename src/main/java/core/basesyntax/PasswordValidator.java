@@ -12,21 +12,17 @@ public class PasswordValidator {
      */
     public void validate(String password, String repeatPassword)
             throws PasswordValidationException {
-        // Перевірка на null
         if (password == null || repeatPassword == null) {
             throw new PasswordValidationException("Wrong passwords");
         }
 
-        // 1. Перевірка на рівність паролів
         if (!Objects.equals(password, repeatPassword)) {
             throw new PasswordValidationException("Wrong passwords");
         }
 
-        // 2. Перевірка мінімальної довжини (>= 10)
         if (password.length() < 10) {
             throw new PasswordValidationException("Wrong passwords");
         }
 
-        // Якщо валідація успішна, метод завершується без виключення.
     }
 }
