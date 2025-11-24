@@ -10,7 +10,8 @@ public class PasswordValidator {
      * @param repeatPassword Повторення пароля.
      * @throws PasswordValidationException Викидається, якщо валідація не пройдена.
      */
-    public void validate(String password, String repeatPassword) throws PasswordValidationException {
+    public void validate(String password, String repeatPassword)
+            throws PasswordValidationException {
         // Перевірка на null
         if (password == null || repeatPassword == null) {
             throw new PasswordValidationException("Wrong passwords");
